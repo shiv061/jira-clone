@@ -1,0 +1,97 @@
+[
+    {
+        "uri": "https://focused-villani-694ccd.netlify.app/",
+        "title": "React Music Player",
+        "tech": [
+            "React",
+            "Hooks",
+            "Context API"
+        ],
+        "imgUri": "/reactMusic.png"
+    },
+    {
+        "uri": "https://github-finder-react-app.netlify.app/",
+        "title": "Github User Finder",
+        "tech": [
+            "React",
+            "Axios",
+            "Context API"
+        ],
+        "imgUri": "/githubScreen.png"
+    },
+    {
+        "uri": "https://elated-fermi-a92447.netlify.app/",
+        "title": "Tic Tac Toe",
+        "tech": [
+            "React",
+            "Javascript",
+            "Context API"
+        ],
+        "imgUri": "/ticTacToe.png"
+    },
+    {
+        "uri": "https://clothing-ecom.web.app/",
+        "title": "React Clothing E-Comm",
+        "tech": [
+            "React",
+            "Redux",
+            "Firebase",
+            "Redux Thunk",
+            "Redux Persist"
+        ],
+        "imgUri": "/ReactEcom.png"
+    },
+    {
+        "uri": "https://wonderful-davinci-4d2eaf.netlify.app/",
+        "title": "Trello Clone",
+        "tech": [
+            "React",
+            "Typescript",
+            "Context API"
+        ],
+        "imgUri": "/trelloClone.png"
+    },
+    {
+        "uri": "https://netflix-clone-557fe.firebaseapp.com/",
+        "title": "Netflix Clone",
+        "tech": [
+            "React",
+            "Context Api",
+            "Styled Components"
+        ],
+        "imgUri": "/netflixClone.png"
+    },
+    {
+        "uri": "https://airbnb-clone-8b4cc.web.app/",
+        "title": "Airbnb Clone",
+        "tech": [
+            "React",
+            "Context Api",
+            "Firebase"
+        ],
+        "imgUri": "/airbnbClone.png"
+    },
+    {
+        "uri": "https://documenter.getpostman.com/view/7301367/TVKD1HJU#dbf298b6-ecae-4773-b3d1-41280b83daf8",
+        "title": "Development Bootcamp Api",
+        "tech": [
+            "Node JS",
+            "Express",
+            "MongoDB",
+            "Postman",
+            "JWT Token"
+        ],
+        "imgUri": "/DevcampApi.png"
+    },
+    {
+        "uri": "https://stark-shore-80289.herokuapp.com/",
+        "title": "Face Recognition",
+        "tech": [
+            "React",
+            "Class Bases",
+            "Heroku",
+            "CLARIFAI API"
+        ],
+        "imgUri": "/reactFace.png"
+    }
+]
