@@ -1,12 +1,17 @@
-import { JiraIcon } from '@atlaskit/logo';
+import Image from 'next/image';
 import Avatar from '@atlaskit/avatar';
+import Button from '@atlaskit/button';
 
 const TopBar = () => {
   return (
-    <div className="flex p-2 border-b-2 shadow-sm">
+    <div className="flex p-2 border-b-2 shadow-sm h-16">
       <div className="flex items-center justify-center" style={{ flex: 2 }}>
-        <JiraIcon iconColor="#0045ac" />
-        <h1 className="text-md text-gray-700 tracking-wider px-2">Shivansh Singh</h1>
+        <span>
+          <Image src="/jira-1.svg" width={25} height={25} />
+        </span>
+        <span>
+          <h1 className="text-md text-gray-700 tracking-wider px-2">Welcome</h1>
+        </span>
       </div>
       <div className="flex items-center w-full" style={{ flex: 6 }}>
         <ul className="flex flex-wrap">
@@ -33,6 +38,9 @@ const TopBar = () => {
           <li className="text-sm px-2 text-gray-500 flex items-center hover:bg-blue-100 hover:text-primary p-1 rounded-sm cursor-pointer">
             <p>Apps</p>
             <DownArrow />
+          </li>
+          <li className="text-sm px-2 text-gray-500 flex items-center">
+            <Button appearance="primary">Create</Button>
           </li>
         </ul>
       </div>

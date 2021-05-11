@@ -14,3 +14,10 @@
     @apply font-light text-extra-200 underline cursor-pointer hover:text-extra-100;
   }
 }
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}

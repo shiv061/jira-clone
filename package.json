@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "@atlaskit/avatar": "^20.2.2",
+    "@atlaskit/breadcrumbs": "^11.2.0",
     "@atlaskit/button": "^15.1.6",
+    "@atlaskit/icon": "^21.5.0",
     "@atlaskit/logo": "^13.4.1",
     "@rehooks/window-scroll-position": "^1.0.1",
     "@rehooks/window-size": "^1.0.2",
