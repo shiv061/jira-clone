@@ -4,15 +4,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#242424',
-        secondary: '#F2F2F2',
+        primary: '#0045ac',
+        secondary: '#f4f5f7',
         extra: {
-          100: '#D8D8D8',
+          100: '#ebecf0',
           200: '#979797',
         },
       },
       fontFamily: {
-        hind: ['Hind'],
+        hind: ['Merriweather Sans'],
       },
     },
   },
