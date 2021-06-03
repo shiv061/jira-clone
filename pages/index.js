@@ -1,13 +1,21 @@
 import Head from 'next/head';
-import { useEffect } from 'react';
+import { useLayoutEffect, useState } from 'react';
 import Main from '../components/Main';
 import TopBar from '../components/TopBar';
-import { useAppContext } from '../context';
 
 export default function Home() {
-  const { open } = useAppContext();
+  const [windowWidth, setWindowWidth] = useState(0);
+  useLayoutEffect(() => {
+    setWindowWidth(window.innerWidth);
+  }, []);
 
-  useEffect(() => {}, []);
+  if (windowWidth < 600) {
+    return (
+      <div className="w-screen h-screen flex justify-center items-center">
+        <h1>Not Available</h1>
+      </div>
+    );
+  }
 
   return (
     <div>

@@ -3,13 +3,12 @@ import { createContext, useContext, useState } from 'react';
 const AppContext = createContext();
 
 export const AppContextProvider = ({ children }) => {
-  const [open, setOpen] = useState(false);
-  const [page, setPage] = useState('home');
+  const [search, setSearch] = useState('');
 
-  return <AppContext.Provider value={{ open, setOpen, page, setPage }}>{children}</AppContext.Provider>;
+  return <AppContext.Provider value={{ search, setSearch }}>{children}</AppContext.Provider>;
 };
 
 export const useAppContext = () => {
-  const { open, setOpen, page, setPage } = useContext(AppContext);
-  return { open, setOpen, page, setPage };
+  const { search, setSearch } = useContext(AppContext);
+  return { search, setSearch };
 };

@@ -5,9 +5,15 @@ import ShareIcon from '@atlaskit/icon/glyph/share';
 import MoreIcon from '@atlaskit/icon/glyph/more';
 import ChevronDownIcon from '@atlaskit/icon/glyph/chevron-down';
 import { useState } from 'react';
+import AvatarGroup from './AvatarGroup';
+import Board from './Board';
+import Projects from '../data.json';
+import { useAppContext } from '../context';
 
 const Kanban = () => {
   const [white, setWhite] = useState(false);
+  const [selected, setSelected] = useState(false);
+  const { search, setSearch } = useAppContext();
   return (
     <div className="h-[calc(100vh-68px)]">
       <div className="w-full p-4">
@@ -40,20 +46,30 @@ const Kanban = () => {
       <div className="flex px-2">
         <div style={{ flex: 1 }}>
           <div className="flex bg-secondary items-center border-2 border-gray-300 rounded-sm p-1 mr-1 mx-2" style={{ background: white && 'white' }}>
-            <input type="text" className="pl-2 bg-secondary" style={{ background: white && 'white' }} onFocus={() => setWhite(true)} onBlur={() => setWhite(false)} />
+            <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} className="pl-2 bg-secondary" style={{ background: white && 'white' }} onFocus={() => setWhite(true)} onBlur={() => setWhite(false)} />
             <Search />
           </div>
         </div>
-        <div style={{ flex: 1 }}>Avatar Group</div>
+        <div style={{ flex: 2 }}>
+          <AvatarGroup />
+        </div>
         <div style={{ flex: 4 }} className="flex justify-start items-center">
           <div className="text-sm font-light">
-            <Button iconAfter={<ChevronDownIcon />}>Quick Filters</Button>
+            <Button isSelected={selected ? true : false} onClick={() => setSelected((prev) => !prev)} iconAfter={<ChevronDownIcon />}>
+              Quick Filters
+            </Button>
           </div>
           <div className="w-1 h-full border-r-2 border-gray-200 mx-4" />
           <div>
             <p className="text-gray-400 font-extralight text-sm cursor-pointer hover:opacity-50">Clear all</p>
           </div>
         </div>
+      </div>
+      <div className="h-[calc(100%-8rem)] w-full flex justify-between">
+        <Board title="TO DO" afterTitle="1 of 4" projects={Projects.slice(9, 11)} />
+        <Board title="In Progress" afterTitle="2 of 4" projects={Projects.slice(0, 3)} />
+        <Board title="Complete" afterTitle="3 of 4" projects={Projects.slice(3, 5)} />
+        <Board title="Released" afterTitle="4 of 4" projects={Projects.slice(5, 9)} />
       </div>
     </div>
   );

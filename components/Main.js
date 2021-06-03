@@ -1,4 +1,3 @@
-import Avatar from '@atlaskit/avatar';
 import DashboardIcon from '@atlaskit/icon/glyph/dashboard';
 import RoadmapIcon from '@atlaskit/icon/glyph/roadmap';
 import BacklogIcon from '@atlaskit/icon/glyph/backlog';

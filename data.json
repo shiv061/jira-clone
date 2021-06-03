@@ -1,35 +1,45 @@
 [
     {
+        "id": "1",
         "uri": "https://focused-villani-694ccd.netlify.app/",
         "title": "React Music Player",
         "tech": [
             "React",
             "Hooks",
-            "Context API"
+            "Context API",
+            "HTML5",
+            "CSS"
         ],
         "imgUri": "/reactMusic.png"
     },
     {
+        "id": "2",
         "uri": "https://github-finder-react-app.netlify.app/",
         "title": "Github User Finder",
         "tech": [
             "React",
             "Axios",
-            "Context API"
+            "Context API",
+            "HTML5",
+            "CSS"
         ],
         "imgUri": "/githubScreen.png"
     },
     {
+        "id": "3",
         "uri": "https://elated-fermi-a92447.netlify.app/",
         "title": "Tic Tac Toe",
         "tech": [
             "React",
             "Javascript",
-            "Context API"
+            "Context API",
+            "HTML5",
+            "CSS"
         ],
         "imgUri": "/ticTacToe.png"
     },
     {
+        "id": "4",
         "uri": "https://clothing-ecom.web.app/",
         "title": "React Clothing E-Comm",
         "tech": [
@@ -37,31 +47,41 @@
             "Redux",
             "Firebase",
             "Redux Thunk",
-            "Redux Persist"
+            "Redux Persist",
+            "HTML5",
+            "CSS"
         ],
         "imgUri": "/ReactEcom.png"
     },
     {
+        "id": "5",
         "uri": "https://wonderful-davinci-4d2eaf.netlify.app/",
         "title": "Trello Clone",
         "tech": [
             "React",
             "Typescript",
-            "Context API"
+            "Context API",
+            "HTML5",
+            "CSS"
         ],
         "imgUri": "/trelloClone.png"
     },
     {
+        "id": "6",
         "uri": "https://netflix-clone-557fe.firebaseapp.com/",
         "title": "Netflix Clone",
         "tech": [
             "React",
             "Context Api",
-            "Styled Components"
+            "Styled Components",
+            "HTML5",
+            "CSS",
+            "TypeScript"
         ],
         "imgUri": "/netflixClone.png"
     },
     {
+        "id": "7",
         "uri": "https://airbnb-clone-8b4cc.web.app/",
         "title": "Airbnb Clone",
         "tech": [
@@ -72,6 +92,7 @@
         "imgUri": "/airbnbClone.png"
     },
     {
+        "id": "8",
         "uri": "https://documenter.getpostman.com/view/7301367/TVKD1HJU#dbf298b6-ecae-4773-b3d1-41280b83daf8",
         "title": "Development Bootcamp Api",
         "tech": [
@@ -79,19 +100,49 @@
             "Express",
             "MongoDB",
             "Postman",
-            "JWT Token"
+            "JWT Token",
+            "JavaScript"
         ],
         "imgUri": "/DevcampApi.png"
     },
     {
+        "id": "9",
         "uri": "https://stark-shore-80289.herokuapp.com/",
         "title": "Face Recognition",
         "tech": [
             "React",
             "Class Bases",
             "Heroku",
-            "CLARIFAI API"
+            "CLARIFAI API",
+            "HTML5",
+            "CSS"
         ],
         "imgUri": "/reactFace.png"
+    },
+    {
+        "id": "10",
+        "uri": "#",
+        "title": "Book Club",
+        "tech": [
+            "React",
+            "React Native",
+            "HTML5",
+            "CSS",
+            "TypeScript",
+            "Next"
+        ]
+    },
+    {
+        "id": "11",
+        "uri": "#",
+        "title": "Movie Database",
+        "tech": [
+            "React",
+            "React Native",
+            "TypeScript",
+            "HTML5",
+            "CSS",
+            "git"
+        ]
     }
 ]
