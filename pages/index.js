@@ -1,11 +1,11 @@
 import Head from 'next/head';
-import { useLayoutEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Main from '../components/Main';
 import TopBar from '../components/TopBar';
 
 export default function Home() {
   const [windowWidth, setWindowWidth] = useState(0);
-  useLayoutEffect(() => {
+  useEffect(() => {
     setWindowWidth(window.innerWidth);
   }, []);
 
