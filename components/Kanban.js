@@ -9,11 +9,28 @@ import AvatarGroup from './AvatarGroup';
 import Board from './Board';
 import Projects from '../data.json';
 import { useAppContext } from '../context';
+import { DragDropContext } from 'react-beautiful-dnd';
+
 
 const Kanban = () => {
   const [white, setWhite] = useState(false);
   const [selected, setSelected] = useState(false);
   const { search, setSearch } = useAppContext();
+  const [projects, setProjects] = useState(Projects)
+
+  function handleOnDragEnd(result) {
+    console.log(result)
+    if (!result.destination) return;
+
+    const items = Array.from(projects);
+    const [reorderedItem] = items.splice(result.source.index, 1);
+    items.splice(result.destination.index, 0, reorderedItem);
+
+    setProjects(items);
+  }
+
+  const BoardData = [{ id: 'TO DO', sub: '1 of 4', proj: projects.slice(9, 11) }, { id: 'In Progress', sub: '2 of 4', proj:projects.slice(0, 3) }, { id: 'Complete', sub: '3 of 4', proj:projects.slice(3, 5) },{ id: 'Released', sub: '4 of 4', proj: projects.slice(5, 9) }]
+
   return (
     <div className="h-[calc(100vh-68px)]">
       <div className="w-full p-4">
@@ -66,10 +83,11 @@ const Kanban = () => {
         </div>
       </div>
       <div className="h-[calc(100%-8rem)] w-full flex justify-between">
-        <Board title="TO DO" afterTitle="1 of 4" projects={Projects.slice(9, 11)} />
-        <Board title="In Progress" afterTitle="2 of 4" projects={Projects.slice(0, 3)} />
-        <Board title="Complete" afterTitle="3 of 4" projects={Projects.slice(3, 5)} />
-        <Board title="Released" afterTitle="4 of 4" projects={Projects.slice(5, 9)} />
+      <DragDropContext onDragEnd={handleOnDragEnd}>
+        {BoardData.map(board => (
+          <Board key={board.id} title={board.id} afterTitle={board.sub} projects={board.proj} />
+        ))}
+        </DragDropContext>
       </div>
     </div>
   );

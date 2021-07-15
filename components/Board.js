@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
+import {  Droppable, Draggable } from 'react-beautiful-dnd';
 import CheckboxIcon from '@atlaskit/icon/glyph/checkbox';
 import ArrowUpIcon from '@atlaskit/icon/glyph/arrow-up';
 import MoreIcon from '@atlaskit/icon/glyph/more';
@@ -20,16 +20,6 @@ const Board = ({ title: mainTitle, afterTitle, projects: filterProjects }) => {
   const close = () => setIsOpen(false);
   const open = () => setIsOpen(true);
 
-  function handleOnDragEnd(result) {
-    if (!result.destination) return;
-
-    const items = Array.from(projects);
-    const [reorderedItem] = items.splice(result.source.index, 1);
-    items.splice(result.destination.index, 0, reorderedItem);
-
-    setProjects(items);
-  }
-
   useEffect(() => {
     if (!search) return setProjects(filterProjects);
     const newFilterProjects = filterProjects.filter((proj) => proj?.title?.toLowerCase()?.includes(search?.toLowerCase()));
@@ -41,11 +31,11 @@ const Board = ({ title: mainTitle, afterTitle, projects: filterProjects }) => {
       <h1 className="text-gray-500 flex text-sm p-2">
         {mainTitle} <p className="ml-4 text-sm">{afterTitle}</p>
       </h1>
-      <DragDropContext onDragEnd={handleOnDragEnd}>
-        <Droppable droppableId="characters">
+
+        <Droppable droppableId={mainTitle}>
           {(provided) => {
             return (
-              <div className="characters w-52  flex flex-col justify-center items-center" {...provided.droppableProps} ref={provided.innerRef}>
+              <div className="characters w-52 flex flex-col justify-center items-center" {...provided.droppableProps} ref={provided.innerRef}>
                 {projects.map(({ id, title, tech, uri, imgUri }, index) => {
                   return (
                     <Draggable key={id} draggableId={id} index={index}>
@@ -84,7 +74,6 @@ const Board = ({ title: mainTitle, afterTitle, projects: filterProjects }) => {
             );
           }}
         </Droppable>
-      </DragDropContext>
       <Dialog isOpen={isOpen} close={close} current={current} />
     </div>
   );
